@@ -23,7 +23,11 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
@@ -43,6 +47,7 @@ nav:
     - Docker: infrastructure/docker.md
   - Services:
     - Übersicht: services/overview.md
+    - Finanz-Bot: services/finanz-bot.md
   - Runbooks:
     - Neuer Service: runbooks/new-service.md
     - Disaster Recovery: runbooks/disaster-recovery.md
