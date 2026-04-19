@@ -1,0 +1,53 @@
+site_name: Homelab Wiki
+site_description: Dokumentation, Runbooks & Cheatsheets für das Homelab
+site_author: sheep64
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - tables
+  - attr_list
+  - def_list
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Infrastruktur:
+    - Übersicht: infrastructure/overview.md
+    - Server: infrastructure/server.md
+    - Netzwerk: infrastructure/network.md
+    - Docker: infrastructure/docker.md
+  - Services:
+    - Übersicht: services/overview.md
+  - Runbooks:
+    - Neuer Service: runbooks/new-service.md
+    - Disaster Recovery: runbooks/disaster-recovery.md
+  - Entscheidungen: decisions/index.md
+  - Cheatsheets:
+    - Docker: cheatsheets/docker.md
+    - Linux: cheatsheets/linux.md
+    - nmap: cheatsheets/nmap.md

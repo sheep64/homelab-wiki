@@ -1,0 +1,9 @@
+services:
+  wiki:
+    image: squidfunk/mkdocs-material
+    container_name: homelab-wiki
+    volumes:
+      - .:/docs
+    ports:
+      - "8001:8000"
+    restart: unless-stopped
